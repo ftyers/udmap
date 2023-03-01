@@ -1,18 +1,18 @@
-# version	url				n_treebanks	n_languages	release_date
-2.11 	 http://hdl.handle.net/11234/1-4923	243 	 138 	November 15, 2022.
-2.10 	 http://hdl.handle.net/11234/1-4758	228 	 130 	May 15, 2022.
-2.9 	 http://hdl.handle.net/11234/1-4611	217 	 122 	November 15, 2021.
-2.8 	 http://hdl.handle.net/11234/1-3687	202 	 114 	May 15, 2021.
-2.7 	 http://hdl.handle.net/11234/1-3424	183 	 104 	November 15, 2020.
-2.6 	 http://hdl.handle.net/11234/1-3226	163 	 92 	May 15, 2020.
-2.5 	 http://hdl.handle.net/11234/1-3105	157 	 90 	November 15, 2019.
-2.4 	 http://hdl.handle.net/11234/1-2988	146 	 83 	May 15, 2019.
-2.3 	 http://hdl.handle.net/11234/1-2895	129 	 76 	November 15, 2018.
-2.2 	 http://hdl.handle.net/11234/1-2837	122 	 71 	July 1, 2018.
-2.1 	 http://hdl.handle.net/11234/1-2515	102 	 60 	November 15, 2017.
-2.0 	 http://hdl.handle.net/11234/1-1983	70 	 50 	March 1, 2017.
-1.4 	 http://hdl.handle.net/11234/1-1827	64 	 47 	November 15, 2016.
-1.3 	 http://hdl.handle.net/11234/1-1699	54 	 40 	May 15, 2016.
-1.2 	 http://hdl.handle.net/11234/1-1548	37 	 33 	November 15, 2015.
-1.1 	 http://hdl.handle.net/11234/LRT-1478	19 	 18 	May 15, 2015.
-1.0 	 http://hdl.handle.net/11234/1-1464	10 	 10 	January 15, 2015.
+#version	url				n_treebanks	n_languages	release_date
+2.11	http://hdl.handle.net/11234/1-4923	243	138	15/11/2022
+2.10	http://hdl.handle.net/11234/1-4758	228	130	15/05/2022
+2.9	http://hdl.handle.net/11234/1-4611	217	122	15/11/2021
+2.8	http://hdl.handle.net/11234/1-3687	202	114	15/05/2021
+2.7	http://hdl.handle.net/11234/1-3424	183	104	15/11/2020
+2.6	http://hdl.handle.net/11234/1-3226	163	92	15/05/2020
+2.5	http://hdl.handle.net/11234/1-3105	157	90	15/11/2019
+2.4	http://hdl.handle.net/11234/1-2988	146	83	15/05/2019
+2.3	http://hdl.handle.net/11234/1-2895	129	76	15/11/2018
+2.2	http://hdl.handle.net/11234/1-2837	122	71	01/07/2018
+2.1	http://hdl.handle.net/11234/1-2515	102	60	15/11/2017
+2.0	http://hdl.handle.net/11234/1-1983	70	50	01/03/2017
+1.4	http://hdl.handle.net/11234/1-1827	64	47	15/11/2016
+1.3	http://hdl.handle.net/11234/1-1699	54	40	15/05/2016
+1.2	http://hdl.handle.net/11234/1-1548	37	33	15/11/2015
+1.1	http://hdl.handle.net/11234/LRT-1478	19	18	15/05/2015
+1.0	http://hdl.handle.net/11234/1-1464	10	10	15/01/2015
