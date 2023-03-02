@@ -16,28 +16,27 @@ ax.set_axis_off()
 ax.set_xlim(left=0, right=width)
 ax.set_ylim(bottom=0, top=height)
 
-with open('mapdata.tsv') as fin:
-    lines = [l.split('\t') for l in fin.readlines() if '.' in l and '#' not in l]
+def lat2x(lat):
+    return width*((float(lat) + 180) % 360)/360
+def lon2y(lon):
+    return height*((90+float(lon)) / 180)
 
-code2ver = {}
+langs = {}
+with open('mapdata.tsv') as fin:
+    for line in fin:
+        if '.' in line and '#' not in line:
+            ls = line.strip().split('\t')
+            langs[ls[0]] = (ls[1], ls[2])
+
 with open('versions.tsv') as fin:
     for line in fin:
         ls = line.split()
-        if len(ls) > 2:
-            for c in ls[2:]:
-                code2ver[c] = ls[0]
-
-ver = list(set(code2ver.values()))
-
-print(code2ver)
-print(ver)
-
-ax.scatter(
-    [width*((float(l[1]) + 180) % 360)/360 for l in lines],
-    [height*((90+float(l[2])) / 180) for l in lines],
-    s=2,
-    c = [ver.index(code2ver[l[0]]) for l in lines]
-    #c=[l[0] for l in lines]
-)
-
+        color = ls[0]
+        mark = ls[1]
+        codes = ls[4:]
+        ax.scatter([lat2x(langs[x][0]) for x in codes],
+                   [lon2y(langs[x][1]) for x in codes],
+                   s=2,
+                   c=color,
+                   marker=mark)
 plt.savefig('map.png', dpi=1000)
