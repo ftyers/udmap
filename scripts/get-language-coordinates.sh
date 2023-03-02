@@ -1,12 +1,7 @@
-#code	lat	long
-fas	35.689167	51.388889
-zho	39.906667	116.3975
-ara	21.4225	39.823333
-grn	-25.416667	-54.633333
-est	59.437222	24.745278
-#
-nhi	20.06	-97.90
-ess	63.43	-170.27
+for lang in $(cat languages.tsv  | cut -f2 | sort -u); do
+	latlong=$(wget -q -O - "https://glottolog.org/glottolog?search=${lang}" | grep longitude | sed 's/"longitude":/\t&/g' | sed 's/, "id": /\t&/g' | cut -f2 | sed 's/"longitude": //g' | sed 's/, "latitude": /\t/g')
+	echo -e "${lang}\t${latlong}"
+done
 abq	42.0	44.25
 afr	30.0	-22.0
 aii	43.0	36.75
@@ -16,6 +11,7 @@ aln	21.3837	42.317
 amh	39.543456	11.708182
 apu	-66.7714	-8.21692
 aqz	-60.9716	-12.8322
+ara	
 arr	-61.5691	-10.3342
 bam	-7.65	12.9
 bej	36.6666	17.2436
@@ -38,8 +34,10 @@ ell	23.13	38.36
 eme	-52.3699	3.23694
 eng	-1.0	53.0
 ess	-170.272	63.4308
+est	
 eus	-1.31622	43.2787
 fao	-6.88497	62.0732
+fas	
 fin	25.5577	64.7628
 fra	2.0	48.0
 fro	1.11	48.8
@@ -51,6 +49,7 @@ glv	-4.45437	54.2604
 got	29.9786	46.9304
 grc	21.9129	39.8155
 grg	146.407	-5.63017
+grn	
 gsw	8.46419	47.0516
 gub	-45.7081	-4.69461
 gun	-52.711	-26.0188
@@ -137,3 +136,4 @@ xum	13.02	42.75
 yor	3.67225	7.15345
 yrl	-66.9646	1.04503
 yue	113.0	23.0
+zho	
