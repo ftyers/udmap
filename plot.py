@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import sys
+import sys, re
 import matplotlib.pyplot as plt
 
 plt.box(False)
@@ -29,13 +29,16 @@ with open('mapdata.tsv') as fin:
             ls = line.strip().split('\t')
             langs[ls[0]] = (ls[1], ls[2])
 
-with open('versions.tsv') as fin:
+filename = sys.argv[1]
+with open(filename) as fin:
     for line in fin:
+        line = re.sub('\t\t*', '\t', line)
         ls = line.split()
         color = ls[0]
         mark = ls[1]
         codes = ls[4:]
-        ver = ls[2]
+        ver = ls[3]
+#        print(ver)
         ax.scatter([lon2x(langs[x][0]) for x in codes],
                    [lat2y(langs[x][1]) for x in codes],
                    s=2,
