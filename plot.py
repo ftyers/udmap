@@ -16,9 +16,9 @@ ax.set_axis_off()
 ax.set_xlim(left=0, right=width)
 ax.set_ylim(bottom=0, top=height)
 
-def lat2x(lat):
+def lon2x(lat):
     return width*((float(lat) + 180) % 360)/360
-def lon2y(lon):
+def lat2y(lon):
     return height*((90+float(lon)) / 180)
 
 langs = {}
@@ -34,8 +34,8 @@ with open('versions.tsv') as fin:
         color = ls[0]
         mark = ls[1]
         codes = ls[4:]
-        ax.scatter([lat2x(langs[x][0]) for x in codes],
-                   [lon2y(langs[x][1]) for x in codes],
+        ax.scatter([lon2x(langs[x][0]) for x in codes],
+                   [lat2y(langs[x][1]) for x in codes],
                    s=2,
                    c=color,
                    marker=mark)
