@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import sys
 import matplotlib.pyplot as plt
 
 plt.box(False)
@@ -34,9 +35,12 @@ with open('versions.tsv') as fin:
         color = ls[0]
         mark = ls[1]
         codes = ls[4:]
+        ver = ls[2]
         ax.scatter([lon2x(langs[x][0]) for x in codes],
                    [lat2y(langs[x][1]) for x in codes],
                    s=2,
                    c=color,
                    marker=mark)
+        plt.savefig('%s_map.png' % ver, dpi=1000)
+
 plt.savefig('map.png', dpi=1000)
