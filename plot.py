@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import sys
 import matplotlib.pyplot as plt
 
 plt.box(False)
@@ -28,15 +29,20 @@ with open('mapdata.tsv') as fin:
             ls = line.strip().split('\t')
             langs[ls[0]] = (ls[1], ls[2])
 
-with open('versions.tsv') as fin:
+filename = sys.argv[1]
+
+with open(filename) as fin:
     for line in fin:
         ls = line.split()
         color = ls[0]
         mark = ls[1]
         codes = ls[4:]
+        ver = ls[3]
         ax.scatter([lat2x(langs[x][0]) for x in codes],
                    [lon2y(langs[x][1]) for x in codes],
                    s=2,
                    c=color,
                    marker=mark)
+        plt.savefig('%s_map.png' % ver, dpi=1000)
+
 plt.savefig('map.png', dpi=1000)
