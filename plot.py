@@ -2,6 +2,7 @@
 
 import sys, re
 import matplotlib.pyplot as plt
+from collections import defaultdict
 
 plt.box(False)
 
@@ -29,8 +30,9 @@ with open('mapdata.tsv') as fin:
             ls = line.strip().split('\t')
             langs[ls[0]] = (ls[1], ls[2])
 
-filename = sys.argv[1]
-with open(filename) as fin:
+points = []
+
+with open('versions.tsv') as fin:
     for line in fin:
         line = re.sub('\t\t*', '\t', line)
         ls = line.split()
@@ -38,12 +40,50 @@ with open(filename) as fin:
         mark = ls[1]
         codes = ls[4:]
         ver = ls[3]
-#        print(ver)
-        ax.scatter([lon2x(langs[x][0]) for x in codes],
-                   [lat2y(langs[x][1]) for x in codes],
-                   s=2,
-                   c=color,
-                   marker=mark)
+        points.append(ax.scatter([lon2x(langs[x][0]) for x in codes],
+                                 [lat2y(langs[x][1]) for x in codes],
+                                 s=2,
+                                 c=color,
+                                 marker=mark))
         plt.savefig('%s_map.png' % ver, dpi=1000)
 
 plt.savefig('map.png', dpi=1000)
+
+for p in points:
+    p.remove()
+
+size_ranges = [
+    (range(1, 5), 1),
+    (range(5, 10), 2),
+    (range(10, 50), 3),
+    (range(50, 100), 4),
+    (range(100, 500), 5),
+    (range(500, 1000), 6),
+    (range(1000, 100000000000000), 7),
+]
+
+sizes = defaultdict(list)
+with open('languages-sizes.tsv') as fin:
+    for line in fin:
+        ls = line.split('\t')
+        if len(ls) < 3:
+            continue
+        if ls[2] == '_':
+            continue
+        if ls[1] == '<1K':
+            sizes[0].append(ls[2])
+            continue
+        s = int(ls[1][:-1])
+        for r, v in size_ranges:
+            if s in r:
+                sizes[v].append(ls[2])
+                break
+
+for sz in sorted(sizes.keys()):
+    cds = sizes[sz]
+    ax.scatter([lon2x(langs[x][0]) for x in cds if x in langs],
+               [lat2y(langs[x][1]) for x in cds if x in langs],
+               s=(1.5*sz+1),
+               c='gray',
+               marker='o')
+plt.savefig('size_map.png', dpi=1000)
