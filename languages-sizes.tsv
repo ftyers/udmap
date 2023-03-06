@@ -55,7 +55,7 @@
 55	50K	fao	Faroese 2 	50K	IE, Germanic
 56	49K	afr	Afrikaans 1 	49K	IE, Germanic
 57	48K	cym	Welsh 1 	48K	IE, Celtic
-58	44K	_	Wolof 1 	44K	Niger-Congo, Northern Atlantic
+58	44K	wol	Wolof 1 	44K	Niger-Congo, Northern Atlantic
 59	44K	mlt	Maltese 1 	44K	Afro-Asiatic, Semitic
 60	43K	vie	Vietnamese 1 	43K	Austro-Asiatic, Viet-Muong
 61	42K	hun	Hungarian 1 	42K	Uralic, Ugric
@@ -67,72 +67,72 @@
 67	26K	_	Hindi English 1 	26K	Code switching
 68	25K	_	Akkadian 2 	25K	Afro-Asiatic, Semitic
 69	22K	tha	Thai 1 	22K	Tai-Kadai
-70	20K	_	Manx 1 	20K	IE, Celtic
-71	20K	_	Erzya 1 	20K	Uralic, Mordvin
-72	15K	_	Xibe 1 	15K	Tungusic
-73	15K	_	Gheg 1 	15K	IE, Albanian
-74	13K	_	Mbya Guarani 2 	13K	Tupian, Maweti-Guarani
+70	20K	glv	Manx 1 	20K	IE, Celtic
+71	20K	myv	Erzya 1 	20K	Uralic, Mordvin
+72	15K	sjo	Xibe 1 	15K	Tungusic
+73	15K	aln	Gheg 1 	15K	IE, Albanian
+74	13K	gun	Mbya Guarani 2 	13K	Tupian, Maweti-Guarani
 75	13K	_	Cantonese 1 	13K	Sino-Tibetan
-76	13K	_	Bambara 1 	13K	Mande
-77	12K	_	Tamil 2 	12K	Dravidian
-78	11K	_	Upper Sorbian 1 	11K	IE, Slavic
-79	10K	_	Western S.P. Nahuatl 1 	10K	Uto-Aztecan
+76	13K	bam	Bambara 1 	13K	Mande
+77	12K	tam	Tamil 2 	12K	Dravidian
+78	11K	hsb	Upper Sorbian 1 	11K	IE, Slavic
+79	10K	nhi	Western S.P. Nahuatl 1 	10K	Uto-Aztecan
 80	10K	kmr	Kurmanji 1 	10K	IE, Iranian
-81	10K	_	Komi Zyrian 2 	10K	Uralic, Permic
+81	10K	kpv	Komi Zyrian 2 	10K	Uralic, Permic
 82	10K	quc	Kiche 1 	10K	Mayan
 83	10K	kaz	Kazakh 1 	10K	Turkic, Northwestern
-84	10K	_	Buryat 1 	10K	Mongolic
+84	10K	bxr	Buryat 1 	10K	Mongolic
 85	10K	bre	Breton 1 	10K	IE, Celtic
-86	10K	_	Amharic 1 	10K	Afro-Asiatic, Semitic
-87	9K	_	Guajajara 1 	9K	Tupian, Maweti-Guarani
-88	8K	_	Yoruba 1 	8K	Niger-Congo, Defoid
+86	10K	amh	Amharic 1 	10K	Afro-Asiatic, Semitic
+87	9K	gub	Guajajara 1 	9K	Tupian, Maweti-Guarani
+88	8K	yor	Yoruba 1 	8K	Niger-Congo, Defoid
 89	7K	_	Zaar 1 	7K	Afro-Asiatic, West Chadic 
 90	6K	tel	Telugu 1 	6K	Dravidian
-91	6K	_	Ligurian 1 	6K	IE, Romance
+91	6K	lij	Ligurian 1 	6K	IE, Romance
 92	6K	ckt	Chukchi 1 	6K	Chukotko-Kamchatkan
-93	6K	_	Bhojpuri 1 	6K	IE, Indic
-94	4K	_	Tupinamba 1 	4K	Tupian, Maweti-Guarani
-95	3K	_	Moksha 1 	3K	Uralic, Mordvin
+93	6K	bho	Bhojpuri 1 	6K	IE, Indic
+94	4K	tpn	Tupinamba 1 	4K	Tupian, Maweti-Guarani
+95	3K	mdf	Moksha 1 	3K	Uralic, Mordvin
 96	3K	mar	Marathi 1 	3K	IE, Indic
-97	3K	_	Karelian 1 	3K	Uralic, Finnic
+97	3K	krl	Karelian 1 	3K	Uralic, Finnic
 98	3K	_	Frisian Dutch 1 	3K	Code switching
 99	2K	ess	Yupik 1 	2K	Eskimo-Aleut
 100	2K	tat	Tatar 1 	2K	Turkic, Northwestern
-101	2K	_	Skolt Sami 1 	2K	Uralic, Sami
+101	2K	sms	Skolt Sami 1 	2K	Uralic, Sami
 102	2K	_	Nheengatu 1 	2K	Tupian, Maweti-Guarani
-103	2K	_	Low Saxon 1 	2K	IE, Germanic
-104	2K	_	Karo 1 	2K	Tupian, Ramarama
-105	2K	_	Kangri 1 	2K	IE, Indic
-106	2K	_	Javanese 1 	2K	Austronesian, Javanese
+103	2K	nds	Low Saxon 1 	2K	IE, Germanic
+104	2K	arr	Karo 1 	2K	Tupian, Ramarama
+105	2K	xnr	Kangri 1 	2K	IE, Indic
+106	2K	jav	Javanese 1 	2K	Austronesian, Javanese
 107	1K	sah	Yakut 1 	1K	Turkic, Northeastern
 108	1K	_	Teko 1 	1K	Tupian, Maweti-Guarani
-109	1K	_	Tagalog 2 	1K	Austronesian, Central Philippine
-110	1K	_	Swiss German 1 	1K	IE, Germanic
-111	1K	_	Swedish Sign Language 1 	1K	Sign Language
-112	1K	_	Munduruku 1 	1K	Tupian, Munduruku
-113	1K	_	Livvi 1 	1K	Uralic, Finnic
-114	1K	_	Komi Permyak 1 	1K	Uralic, Permic
+109	1K	tgl	Tagalog 2 	1K	Austronesian, Central Philippine
+110	1K	gsw	Swiss German 1 	1K	IE, Germanic
+111	1K	swl	Swedish Sign Language 1 	1K	Sign Language
+112	1K	myu	Munduruku 1 	1K	Tupian, Munduruku
+113	1K	olo	Livvi 1 	1K	Uralic, Finnic
+114	1K	koi	Komi Permyak 1 	1K	Uralic, Permic
 115	1K	_	Hittite 1 	1K	IE, Anatolian
-116	1K	_	Cebuano 1 	1K	Austronesian, Central Philippine
-117	1K	_	Akuntsu 1 	1K	Tupian, Tupari
-118	<1K	_	Xavante 1 	<1K	Macro-Je
-119	<1K	_	Warlpiri 1 	<1K	Pama-Nyungan
-120	<1K	_	Umbrian 1 	<1K	IE, Italic
-121	<1K	_	South Levantine Arabic 1 	<1K	Afro-Asiatic, Semitic
-122	<1K	_	Soi 1 	<1K	IE, Iranian
-123	<1K	_	Sinhala 1 	<1K	IE, Indic
+116	1K	ceb	Cebuano 1 	1K	Austronesian, Central Philippine
+117	1K	aqz	Akuntsu 1 	1K	Tupian, Tupari
+118	<1K	xav	Xavante 1 	<1K	Macro-Je
+119	<1K	wbp	Warlpiri 1 	<1K	Pama-Nyungan
+120	<1K	xum	Umbrian 1 	<1K	IE, Italic
+121	<1K	ajp	South Levantine Arabic 1 	<1K	Afro-Asiatic, Semitic
+122	<1K	soj	Soi 1 	<1K	IE, Iranian
+123	<1K	sin	Sinhala 1 	<1K	IE, Indic
 124	<1K	_	Old Turkish 1 	<1K	Turkic, Northeastern
 125	<1K	nap	Neapolitan 1 	<1K	IE, Romance
-126	<1K	_	Nayini 1 	<1K	IE, Iranian
+126	<1K	nyq	Nayini 1 	<1K	IE, Iranian
 127	<1K	mal	Malayalam 1 	<1K	Dravidian
-128	<1K	_	Makurap 1 	<1K	Tupian, Tupari
-129	<1K	_	Madi 1 	<1K	Arawan
-130	<1K	_	Khunsari 1 	<1K	IE, Iranian
-131	<1K	_	Kaapor 1 	<1K	Tupian, Maweti-Guarani
+128	<1K	mpu	Makurap 1 	<1K	Tupian, Tupari
+129	<1K	grg	Madi 1 	<1K	Arawan
+130	<1K	kfm	Khunsari 1 	<1K	IE, Iranian
+131	<1K	uks	Kaapor 1 	<1K	Tupian, Maweti-Guarani
 132	<1K	grn	Guarani 1 	<1K	Tupian, Maweti-Guarani
-133	<1K	_	Bengali 1 	<1K	IE, Indic
-134	<1K	_	Beja 1 	<1K	Afro-Asiatic, Cushitic
+133	<1K	ben	Bengali 1 	<1K	IE, Indic
+134	<1K	bej	Beja 1 	<1K	Afro-Asiatic, Cushitic
 135	<1K	_	Assyrian 1 	<1K	Afro-Asiatic, Semitic
-136	<1K	_	Apurina 1 	<1K	Arawakan
+136	<1K	apu	Apurina 1 	<1K	Arawakan
 137	<1K	sqi	Albanian 1 	<1K	IE, Albanian
-138	<1K	_	Abaza 1 	<1K	Northwest Caucasian
+138	<1K	abq	Abaza 1 	<1K	Northwest Caucasian
