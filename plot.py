@@ -45,9 +45,9 @@ with open('versions.tsv') as fin:
                                  s=2,
                                  c=color,
                                  marker=mark))
-        plt.savefig('%s_map.png' % ver, dpi=1000)
+#        plt.savefig('%s_map.png' % ver, dpi=1000)
 
-plt.savefig('map.png', dpi=1000)
+#plt.savefig('map.png', dpi=1000)
 
 for p in points:
     p.remove()
@@ -61,6 +61,9 @@ size_ranges = [
     (range(500, 1000), 6),
     (range(1000, 100000000000000), 7),
 ]
+
+size_colours = ['#462b8c', '#524994', '#60649c', '#6f7ea2', '#7f98a8', '#8fb3ac' ,'#a0cdb0', '#b2e8b2']
+size_colours.reverse()
 
 sizes = defaultdict(list)
 with open('languages-sizes.tsv') as fin:
@@ -83,7 +86,10 @@ for sz in sorted(sizes.keys()):
     cds = sizes[sz]
     ax.scatter([lon2x(langs[x][0]) for x in cds if x in langs],
                [lat2y(langs[x][1]) for x in cds if x in langs],
-               s=(1.5*sz+1),
-               c='gray',
+               #s=(1.5*sz+1),
+               s=2,
+               #c='gray',
+               c=size_colours[sz],
+               #c='#' + '%x' % (10) * 2 +  '%x' % (abs(sz-7)) * 2 + '%x' % (10) * 2,
                marker='o')
 plt.savefig('size_map.png', dpi=1000)
