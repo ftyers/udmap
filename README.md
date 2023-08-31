@@ -19,3 +19,6 @@
 * Update `mapdata.tsv` with the language code and coordinates (you can get these from glottolog) ... if something weird happens check the order of lat/long
 * Run `plot.py`. The maps will be called `$VERSION_map.png`.
 
+### For the size map
+
+* Add the language + treebank size (from the homepage of the UD project) to `languages-sizes.tsv`

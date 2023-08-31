@@ -50,7 +50,7 @@ with open('versions.tsv') as fin:
                                  s=2,
                                  c=color,
                                  marker=mark))
-        plt.savefig('%s_map.png' % ver, dpi=1000)
+#        plt.savefig('%s_map.png' % ver, dpi=1000)
 
 plt.savefig('map.png', dpi=1000)
 
@@ -88,14 +88,14 @@ with open('languages-sizes_1.0.tsv') as fin:
                 sizes[v].append(ls[2])
                 break
 
-#for sz in sorted(sizes.keys()):
-#    cds = sizes[sz]
-#    ax.scatter([lon2x(langs[x][0]) for x in cds if x in langs],
-#               [lat2y(langs[x][1]) for x in cds if x in langs],
-#               #s=(1.5*sz+1),
-#               s=2,
-#               #c='gray',
-#               c=size_colours[sz],
-#               #c='#' + '%x' % (10) * 2 +  '%x' % (abs(sz-7)) * 2 + '%x' % (10) * 2,
-#               marker='o')
-#plt.savefig('size_map_1.0.png', dpi=1000)
+for sz in sorted(sizes.keys()):
+    cds = sizes[sz]
+    ax.scatter([lon2x(langs[x][0]) for x in cds if x in langs],
+               [lat2y(langs[x][1]) for x in cds if x in langs],
+               #s=(1.5*sz+1),
+               s=2,
+               #c='gray',
+               c=size_colours[sz],
+               #c='#' + '%x' % (10) * 2 +  '%x' % (abs(sz-7)) * 2 + '%x' % (10) * 2,
+               marker='o')
+plt.savefig('size_map_1.0.png', dpi=1000)
