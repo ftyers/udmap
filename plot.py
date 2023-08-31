@@ -32,22 +32,27 @@ with open('mapdata.tsv') as fin:
 
 points = []
 
+valid_codes = []
+
 with open('versions.tsv') as fin:
+#tab:blue	o	1.0	10	hun spa eng swe ces ita gle deu fra fin
+
     for line in fin:
         line = re.sub('\t\t*', '\t', line)
         ls = line.split()
         color = ls[0]
         mark = ls[1]
         codes = ls[4:]
-        ver = ls[3]
-        points.append(ax.scatter([lon2x(langs[x][0]) for x in codes],
-                                 [lat2y(langs[x][1]) for x in codes],
+        ver = ls[2]
+        valid_codes = [x for x in codes if x in langs]
+        points.append(ax.scatter([lon2x(langs[x][0]) for x in valid_codes],
+                                 [lat2y(langs[x][1]) for x in valid_codes],
                                  s=2,
                                  c=color,
                                  marker=mark))
-#        plt.savefig('%s_map.png' % ver, dpi=1000)
+        plt.savefig('%s_map.png' % ver, dpi=1000)
 
-#plt.savefig('map.png', dpi=1000)
+plt.savefig('map.png', dpi=1000)
 
 for p in points:
     p.remove()
@@ -66,7 +71,8 @@ size_colours = ['#462b8c', '#524994', '#60649c', '#6f7ea2', '#7f98a8', '#8fb3ac'
 size_colours.reverse()
 
 sizes = defaultdict(list)
-with open('languages-sizes.tsv') as fin:
+#with open('languages-sizes.tsv') as fin:
+with open('languages-sizes_1.0.tsv') as fin:
     for line in fin:
         ls = line.split('\t')
         if len(ls) < 3:
@@ -82,14 +88,14 @@ with open('languages-sizes.tsv') as fin:
                 sizes[v].append(ls[2])
                 break
 
-for sz in sorted(sizes.keys()):
-    cds = sizes[sz]
-    ax.scatter([lon2x(langs[x][0]) for x in cds if x in langs],
-               [lat2y(langs[x][1]) for x in cds if x in langs],
-               #s=(1.5*sz+1),
-               s=2,
-               #c='gray',
-               c=size_colours[sz],
-               #c='#' + '%x' % (10) * 2 +  '%x' % (abs(sz-7)) * 2 + '%x' % (10) * 2,
-               marker='o')
-plt.savefig('size_map.png', dpi=1000)
+#for sz in sorted(sizes.keys()):
+#    cds = sizes[sz]
+#    ax.scatter([lon2x(langs[x][0]) for x in cds if x in langs],
+#               [lat2y(langs[x][1]) for x in cds if x in langs],
+#               #s=(1.5*sz+1),
+#               s=2,
+#               #c='gray',
+#               c=size_colours[sz],
+#               #c='#' + '%x' % (10) * 2 +  '%x' % (abs(sz-7)) * 2 + '%x' % (10) * 2,
+#               marker='o')
+#plt.savefig('size_map_1.0.png', dpi=1000)
